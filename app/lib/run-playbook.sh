@@ -104,7 +104,7 @@ run_playbook() {
 
 	# Run the playbook
 	# shellcheck disable=SC2086
-	ANSIBLE_CONFIG="$BASEDIR/ansible.cfg" ansible-playbook --inventory="localhost," \
+	ANSIBLE_CONFIG="$BASEDIR/ansible.cfg" ansible-playbook --inventory="stereumnodes," \
 		--connection=local "$@" "$BASEDIR/playbook.yml"
 }
 
